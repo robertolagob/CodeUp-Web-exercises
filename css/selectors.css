@@ -9,7 +9,7 @@
     that are a descendant of id="container"
     and have a class of "fancy-header" */
   #container h1.fancy-header  {
-    color: blue;
+    color: darkolivegreen;
     text-decoration: underline;
 }
 
@@ -35,6 +35,12 @@ h1
     text-align: center;
     text-decoration-line: underline;
 
+}
+
+
+body
+{
+    background-color: aliceblue;
 }
 
 
