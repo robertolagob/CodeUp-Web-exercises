@@ -52,7 +52,7 @@
 
 
 
-.box:nth-child(5) {
+.box:nth-child(2n) {
     clear: left;
 }
 
