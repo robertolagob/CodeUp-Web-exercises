@@ -1,0 +1,109 @@
+
+body
+{
+    padding: 5px;
+    align-content: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.alert-info
+{
+    width: 100%;
+    height: 42px;
+    border: 1px black solid;
+    text-align: center;
+    margin: auto;
+    padding-top: 5px;
+    background-color: paleturquoise;
+}
+
+.main-title
+{
+    text-align: center;
+}
+
+.nav-links
+{
+    list-style: none;
+    width: 100%;
+    border-color: white;
+    margin-left: -40px;
+    background-color: white;
+
+
+}
+
+.list-items
+{
+    background-color: #CCCCCC;
+    padding: 15px 0px;
+    text-align: center;
+    border: 3px white solid;
+    height: 40px;
+}
+
+.mobimg
+{
+    width: 288px;
+    height: 224px;
+    display: block;
+    margin: auto;
+
+}
+
+@media  screen and (min-width: 768px)
+{
+
+
+    .hidden-on-desktop
+    {
+        display: none;
+    }
+
+
+    .pc-image
+    {
+        width: 700px;
+        height: 385px;
+        /*margin-left: 20px;*/
+        clear: both;
+    }
+
+    .main-title
+    {
+        float: left;
+    }
+
+    .list-items
+    {
+        float: left;
+        clear: right;
+        background-color: white;
+        margin-left: 35px;
+    }
+    .nav-links
+    {
+        float: right;
+        width: 50%;
+    }
+    body
+    {
+        padding: 20px;
+    }
+
+    .sub-section
+    {
+        float: left;
+        width: 40%;
+        text-align: left;
+    }
+
+    .main
+    {
+        float: left;
+        width: 60%;
+        text-align: left;
+    }
+
+}
+
