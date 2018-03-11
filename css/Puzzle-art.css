@@ -19,6 +19,7 @@ body{
     width: 100%;
     border: solid black 1px;
     overflow: hidden;
+
 }
 
 /* common columns features*/
@@ -84,52 +85,53 @@ body{
 /* column 2 elements */
 
 .section21{
-     width: 97.5%;
-     height: 144px;
+    width: 97.5%;
+    height: 144px;
+    float: none;
 
- }
+}
+
 .section22{
-    width: 55.5%;
-    height: 147px;
-
-}
-.section23{
-    width: 55.5%;
-    height: 100px;
-
-
-}
-
-.section24{
     width: 18.5%;
     height: 254px;
-    position: relative;
-    top:-154px;
+    float: right;
+
 }
-.section25{
+.section23 {
     width: 18.2%;
     height: 254px;
-    position: relative;
-    top:-154px;
+    float: right;
 
 
-}.section26{
-     width: 77.5%;
-     height: 83.5px;
-     position: relative;
-     top: -154px;
- }
+}
+.section24{
+    width: 55.5%;
+    height: 147px;
+    float: right;
+    clear: left;
+
+}
+.section25{
+    width: 55.5%;
+    height: 101px;
+
+
+}
+
 .section27 {
     width: 17.2%;
     height: 40px;
-    position: relative;
-    top: -154px;
+    float: right;
+}
+.section26{
+    width: 77.5%;
+    height: 83.5px;
+
 }
 .section28 {
     width: 17.2%;
     height: 37px;
-    position: relative;
-    top: -154px;
+    ;
 }
 
 /* column 3 elements */
@@ -138,6 +140,7 @@ body{
     width: 98%;
     height: 298px;
     border: 3px black solid;
+    background-color: #0802b6;
 
 }
 
@@ -152,7 +155,6 @@ body{
     width: 71.5%;
     height: 248px;
 
-    float: right;
 }
 .section33 {
 
@@ -163,9 +165,21 @@ body{
 
 .section34{
     width: 23%;
-    height: 100px;
+    height: 106px;
 }
 .section35{
     width: 71.7%;
-    height: 100px;
+    height: 106px;
+    clear: right;
 }
+
+.section36{
+    width: 23%;
+    height: 84px;
+}
+
+.section37{
+    width: 71.7%;
+    height: 84px;
+}
+
