@@ -18,6 +18,7 @@ body{
 .container{
     width: 100%;
     border: solid black 1px;
+    overflow: hidden;
 }
 
 /* common columns features*/
@@ -35,6 +36,13 @@ body{
 .pile2{
     width: 40%;
 }
+.pile3{
+
+    float: right;
+    width: 39.3%;
+
+}
+
 
 /*common features for all squares*/
 
@@ -78,14 +86,18 @@ body{
 .section21{
      width: 97.5%;
      height: 144px;
+
  }
 .section22{
     width: 55.5%;
     height: 147px;
+
 }
 .section23{
     width: 55.5%;
     height: 100px;
+
+
 }
 
 .section24{
@@ -95,10 +107,65 @@ body{
     top:-154px;
 }
 .section25{
-    width: 18%;
+    width: 18.2%;
     height: 254px;
     position: relative;
     top:-154px;
 
+
+}.section26{
+     width: 77.5%;
+     height: 83.5px;
+     position: relative;
+     top: -154px;
+ }
+.section27 {
+    width: 17.2%;
+    height: 40px;
+    position: relative;
+    top: -154px;
+}
+.section28 {
+    width: 17.2%;
+    height: 37px;
+    position: relative;
+    top: -154px;
 }
 
+/* column 3 elements */
+
+.sub{
+    width: 98%;
+    height: 298px;
+    border: 3px black solid;
+
+}
+
+
+.section31{
+    width: 23%;
+    height: 248px;
+}
+
+
+.section32 {
+    width: 71.5%;
+    height: 248px;
+
+    float: right;
+}
+.section33 {
+
+    clear: both;
+    float: none;
+    height: 38px;
+}
+
+.section34{
+    width: 23%;
+    height: 100px;
+}
+.section35{
+    width: 71.7%;
+    height: 100px;
+}
