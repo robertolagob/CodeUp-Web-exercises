@@ -1,0 +1,104 @@
+
+/* general styling reset*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* general behaviors*/
+
+body{
+    padding: 200px;
+}
+
+
+
+.container{
+    width: 100%;
+    border: solid black 1px;
+}
+
+/* common columns features*/
+
+.column {
+    height: 498px;
+    border: black solid 1px;
+    float: left;
+}
+/* columns width */
+.pile1 {
+    width: 20%;
+}
+
+.pile2{
+    width: 40%;
+}
+
+/*common features for all squares*/
+
+.bricks{
+    border: 3px solid black;
+    float: left;
+}
+
+/* column 1 elements : notation section+column number+element number*/
+/* column 1 elements */
+
+.section11{
+    width: 60%;
+    height: 297px;
+}
+.section12{
+    width: 29.5%;
+    height: 144px;
+}
+.section13{
+    width: 29.5%;
+    height: 105px;
+
+}
+.section14{
+    width: 29.5%;
+    height: 36px;
+}
+.section15{
+    width: 95%;
+    height: 100px;
+}
+
+.section16{
+    width: 95%;
+    height: 85px;
+}
+
+/* column 2 elements */
+
+.section21{
+     width: 97.5%;
+     height: 144px;
+ }
+.section22{
+    width: 55.5%;
+    height: 147px;
+}
+.section23{
+    width: 55.5%;
+    height: 100px;
+}
+
+.section24{
+    width: 18.5%;
+    height: 254px;
+    position: relative;
+    top:-154px;
+}
+.section25{
+    width: 18%;
+    height: 254px;
+    position: relative;
+    top:-154px;
+
+}
+
