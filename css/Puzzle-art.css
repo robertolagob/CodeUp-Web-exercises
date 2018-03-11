@@ -1,4 +1,10 @@
 
+/* designed for a 768x639 max resolution with percent with values */
+
+
+
+
+
 /* general styling reset*/
 
 *{
@@ -17,7 +23,7 @@ body{
 
 .container{
     width: 100%;
-    border: solid black 1px;
+    border: solid white 1px;
     overflow: hidden;
 
 }
@@ -51,6 +57,40 @@ body{
     border: 3px solid black;
     float: left;
 }
+/*cleaning borders color*/
+
+.top{
+    border-top-color: transparent;
+}
+.right{
+   border-right-color: transparent;
+}
+.bottom{
+    border-bottom-color: transparent;
+}
+
+.left
+{
+    border-left-color: transparent;
+}
+
+
+/* background color for squares */
+
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+}
+.white{
+    background-color: white;
+}
+
+
 
 /* column 1 elements : notation section+column number+element number*/
 /* column 1 elements */
@@ -92,7 +132,7 @@ body{
 }
 
 .section22{
-    width: 18.5%;
+    width: 17.5%;
     height: 254px;
     float: right;
 
@@ -105,14 +145,14 @@ body{
 
 }
 .section24{
-    width: 55.5%;
+    width: 56.5%;
     height: 147px;
     float: right;
     clear: left;
 
 }
 .section25{
-    width: 55.5%;
+    width: 56.5%;
     height: 101px;
 
 
@@ -182,4 +222,6 @@ body{
     width: 71.7%;
     height: 84px;
 }
+
+
 
