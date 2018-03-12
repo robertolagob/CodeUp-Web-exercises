@@ -22,6 +22,7 @@
     padding: 10px ;
     /*background-color: #E1E1E1;*/
 
+
 }
 
 .one-half,
@@ -29,8 +30,12 @@
 .one-fourth,
 .one-eighth,
 .two-third,
+.two-four,
+.three-six,
 .three-eighth{
     width: 100%;
+    text-align: center;
+
 }
 
 
@@ -39,20 +44,16 @@
 
     .one-half {
         width: 50%;
-
     }
 
     .one-third {
-        width: 33.3%;
-    }
+        width: 33.3%;}
 
     .one-fourth {
-        width: 25%;
-    }
+        width: 25%;}
 
     .one-eighth {
-        width: 12.5%;
-    }
+        width: 12.5%;}
 
     .last-col {
         margin-top: 40px;
@@ -60,11 +61,20 @@
 
     /* bonus 1: creating new rules to have some different width spaces*/
     .two-third {
-        width: 66.6%;
+        width: 66.666%;
     }
 
     .three-eighth {
-        width: 37.5%;
+        width: 37.555%;
+    }
+
+    .three-six
+    {
+        width: 33.333%;
+    }
+
+    .one-half-offset{
+        margin-left: 33.333%;
     }
 
 }
