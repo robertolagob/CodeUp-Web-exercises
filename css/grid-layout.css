@@ -5,6 +5,7 @@
     margin: 0 auto;
     max-width: 1024px;
     overflow: auto;
+    clear: both;
 }
 
 
@@ -16,50 +17,57 @@
 
 .column{
     float: left;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     box-sizing: border-box;
     padding: 10px ;
-    background-color: #E1E1E1;
+    /*background-color: #E1E1E1;*/
 
 }
 
-
-
-.one-half{
-    width: 50%;
-
-}
-
-
-.one-third{
-    width: 33.3%;
-}
-
-.one-fourth{
-    width: 25%;
-}
-
-.one-eighth{
-    width: 12.5%;
-}
-
-.last-col{
-    margin-top: 40px;
-}
-
-
-/* bonus 1: creating new rules to have some different width spaces*/
-
-.two-third{
-    width: 66.6%;
-}
+.one-half,
+.one-third,
+.one-fourth,
+.one-eighth,
+.two-third,
 .three-eighth{
-   width: 37.5%;
+    width: 100%;
 }
 
 
 
+@media  screen and (min-width: 768px) {
 
+    .one-half {
+        width: 50%;
+
+    }
+
+    .one-third {
+        width: 33.3%;
+    }
+
+    .one-fourth {
+        width: 25%;
+    }
+
+    .one-eighth {
+        width: 12.5%;
+    }
+
+    .last-col {
+        margin-top: 40px;
+    }
+
+    /* bonus 1: creating new rules to have some different width spaces*/
+    .two-third {
+        width: 66.6%;
+    }
+
+    .three-eighth {
+        width: 37.5%;
+    }
+
+}
 
 
 
