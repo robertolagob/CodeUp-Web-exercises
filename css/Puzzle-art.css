@@ -1,5 +1,5 @@
 
-/* designed for a 768x639 max resolution with percent with values */
+/* designed for a 1024x630 max resolution with percent with values */
 
 
 
@@ -223,5 +223,14 @@ body{
     height: 84px;
 }
 
+
+
+@media screen and (min-device-width: 1024px)
+{
+    body
+    {
+        padding: 222px;
+    }
+}
 
 

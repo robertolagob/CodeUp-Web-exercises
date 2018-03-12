@@ -1,0 +1,61 @@
+
+
+
+.container{
+    margin: 0 auto;
+    max-width: 1024px;
+    overflow: auto;
+}
+
+
+.row{
+    overflow: auto;
+    margin-bottom: 20px;
+
+}
+
+.column{
+    float: left;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px ;
+    background-color: #E1E1E1;
+
+}
+
+
+
+.one-half{
+    width: 50%;
+
+}
+
+
+.one-third{
+    width: 33.3%;
+}
+
+.one-fourth{
+    width: 25%;
+}
+
+.one-eighth{
+    width: 12.5%;
+}
+
+.two-third{
+    width: 66.6%;
+}
+.three-eighth{
+   width: 37.5%;
+}
+
+.last-col{
+    margin-top: 40px;
+}
+
+
+
+/* bonus 1: creating new rules to have some different width spaces*/
+
+
