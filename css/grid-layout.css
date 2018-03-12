@@ -43,6 +43,13 @@
     width: 12.5%;
 }
 
+.last-col{
+    margin-top: 40px;
+}
+
+
+/* bonus 1: creating new rules to have some different width spaces*/
+
 .two-third{
     width: 66.6%;
 }
@@ -50,12 +57,13 @@
    width: 37.5%;
 }
 
-.last-col{
-    margin-top: 40px;
-}
 
 
 
-/* bonus 1: creating new rules to have some different width spaces*/
+
+
+
+
+
 
 
