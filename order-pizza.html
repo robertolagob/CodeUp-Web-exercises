@@ -1,0 +1,384 @@
+<!doctype html5>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><!-- TODO: put your title here --></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- Your custom styles go here -->
+</head>
+<body>
+
+
+<!-- Main page content -->
+<div class="mainheader">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
+
+<!-- container for the rest of the body except for the main menu bar -->
+
+<container>
+
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container ">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+
+    <div>
+        <h2>Build your own pizza</h2>
+    </div>
+
+    <!-- tabs -->
+    <div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">2</span>cheese and sauce</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+            </li>
+        </ul>
+
+        <!-- nested cards for choosing size and crust-->
+
+        <div class="card">
+            <div class="card-header bg-primary">
+                Choose size and crust
+            </div>
+            <div class="card-body">
+                <!-- nested card 1-->
+                <div class="card">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+                    <!-- nested card 2-->
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>Garlic seasoned crust with a rich, buttery taste</p>
+                        </blockquote>
+                        <!-- group list -->
+                        <!-- 1rst element -->
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center">
+                                <!--check button-->
+                                <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Small (10")</label>
+                                </span>
+                            <!-- 2nd element-->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Medium (12")</label>
+                                </span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- second card-->
+                <div class="card">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <!-- nested card 2-->
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>thin enough for optimum crispy to crunchy ratio </p>
+                        </blockquote>
+                        <!-- group list -->
+                        <!-- 1rst element -->
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center">
+                                <!--check button-->
+                                <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Medium (12")</label>
+                                </span>
+                                <!-- 2nd element-->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Large (14")</label>
+                                </span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="card">
+
+                    <a href="#" class="btn btn-primary">Next Step</a>
+                </div>
+            </div>
+
+            <!-- second stage for choosing cheese and sause-->
+            <div class="card">
+                <div class="card-header bg-primary">
+                    Choose cheese and sauce
+                </div>
+                <div class="card-body">
+                    <!-- nested card 1-->
+                    <div class="card">
+                        <div class="card-header">
+                            cheese
+                        </div>
+                        <!-- nested card 2-->
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>How much?</p>
+                            </blockquote>
+                            <!-- group list -->
+                            <!-- 1rst element -->
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <!--Select for cheese-->
+                                    <span>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">How Much?</label>
+                                            <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+                                              <option>Light</option>
+                                              <option>Normal</option>
+                                              <option>Extra</option>
+                                              <option>Double</option>
+                                            </select>
+                                          </div>
+                                    </span>
+                                    <!-- 2nd element-->
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- second card-->
+                    <div class="card">
+                        <div class="card-header">
+                            Sauce
+                        </div>
+                        <!-- nested card 2-->
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>What Type? </p>
+                            </blockquote>
+                            <!-- group list -->
+                            <!-- 1rst element -->
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <!--check button-->
+                                    <span>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">How Much?</label>
+                                            <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+                                              <option>Tomato Sauce</option>
+                                              <option>Marinara Sauce</option>
+                                              <option>BBQ Sauce</option>
+                                              <option>Alfredo Sauce</option>
+                                            </select>
+                                          </div>
+                                    </span>
+                                    <!-- 2nd element-->
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">How Much?</label>
+                                            <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+                                              <option>Light</option>
+                                              <option>Normal</option>
+                                              <option>Extra</option>
+                                            </select>
+                                          </div>
+                                    </span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <a href="#" class="btn btn-primary">Next Step</a>
+                    </div>
+                </div>
+        </div>
+            <div class="card">
+                <div class="card-header bg-primary">
+                    Choose size and crust
+                </div>
+                <div class="card-body">
+                    <!-- nested card 1-->
+                    <div class="card">
+                        <div class="card-header">
+                            Hand Tossed
+                        </div>
+                        <!-- nested card 2-->
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Garlic seasoned crust with a rich, buttery taste</p>
+                            </blockquote>
+                            <!-- group list -->
+                            <!-- 1rst element -->
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <!--check button-->
+                                    <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Small (10")</label>
+                                </span>
+                                    <!-- 2nd element-->
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Medium (12")</label>
+                                </span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- second card-->
+                    <div class="card">
+                        <div class="card-header">
+                            Crispy Thin
+                        </div>
+                        <!-- nested card 2-->
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>thin enough for optimum crispy to crunchy ratio </p>
+                            </blockquote>
+                            <!-- group list -->
+                            <!-- 1rst element -->
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <!--check button-->
+                                    <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Medium (12")</label>
+                                </span>
+                                    <!-- 2nd element-->
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Large (14")</label>
+                                </span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <a href="#" class="btn btn-primary">Next Step</a>
+                    </div>
+                </div>
+
+                <!-- third stage for choosing topping -->
+
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        Choose toppings
+                    </div>
+                    <div class="card-body">
+                        <!-- nested card 1-->
+                        <div class="card">
+                            <div class="card-header">
+                                Choose meats
+                            </div>
+                            <!-- nested card 2-->
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>Garlic seasoned crust with a rich, buttery taste</p>
+                                </blockquote>
+                                <!-- group list -->
+                                <!-- 1rst element -->
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <!--check button-->
+                                        <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Small (10")</label>
+                                </span>
+                                        <!-- 2nd element-->
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Medium (12")</label>
+                                </span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- second card-->
+                        <div class="card">
+                            <div class="card-header">
+                                Crispy Thin
+                            </div>
+                            <!-- nested card 2-->
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>thin enough for optimum crispy to crunchy ratio </p>
+                                </blockquote>
+                                <!-- group list -->
+                                <!-- 1rst element -->
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <!--check button-->
+                                        <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Medium (12")</label>
+                                </span>
+                                        <!-- 2nd element-->
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><label class="">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" >  Large (14")</label>
+                                </span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="card">
+
+                            <a href="#" class="btn btn-primary">Next Step</a>
+                        </div>
+                    </div>
+    </div>
+
+
+</container>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Your custom JS goes here -->
+</body>
+</html>
