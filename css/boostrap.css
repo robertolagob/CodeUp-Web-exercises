@@ -4,28 +4,32 @@ body{
     margin-top: 10px;
 
 }
+/* color for the volatile element for advertising*/
 .color1{
     background-color: paleturquoise;
 }
 
-
-.color5{
-    background-color: #D2D8C8;
-}
+/* for the main navigation menu contaier*/
 
 .vinculo{
     text-align: center;
     padding: 10px;
 }
 
+/* for the ul */
+
 .menu{
-    list-style: none;
+
     list-style-type: none;
 }
 
+.picture{
+    width: 100%;
+    margin: 0 auto;
+}
 
 
-
+/* for the navigation min menu on sm format*/
 .nav-links li{
     background-color: #CCCCCC;
     padding: 1em;
@@ -34,6 +38,65 @@ body{
     list-style-type: none;
 }
 
+/* for the general container of the grids */
+div .messures{
+    text-align: center;
+    padding-top: 10px;
+
+
+}
+
+
+/* to add padding between the fraction number on the grids*/
+.insider{
+    padding-bottom: 10px;
+}
+
+
+/* setting special sizes for clumns*/
+.col-md-1-5, col-lg-1-5{
+    width: 12.5%;
+    text-align: center;
+
+
+}
+
+.col-md-2-3, col-lg-2-3 {
+    width: 66.666%;
+
+}
+
+
+.col-md-3-8, col-lg-3-8{
+    width: 37.5%;
+
+}
+
+
+/*for media icons*/
+.smaller{
+    width: 12%;
+}
+
+
+.media-list{
+
+    float: right;
+    list-style-type: none;
+}
+
+.media-list li{
+    display: inline;
+}
+
+/* adding some space between footer and articles paragraph*/
+.sub-section{
+    padding-bottom: 50px;
+}
+
+
+
+/* media for biggest resolution width */
 
 
 
@@ -41,11 +104,12 @@ body{
 {
 
 
+    /* erasing advertising block*/
     div.volatile{
         display: none;
     }
 
-
+/* setting the nav links horizontally*/
 
     .nav-links {
         float: right;
@@ -58,4 +122,10 @@ body{
         background-color: white;
     }
 
+
+
+
+
 }
+
+
