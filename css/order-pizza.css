@@ -1,0 +1,21 @@
+
+
+
+.fondo{
+    background-image: url("../Images/pizza.png");
+    text-align: center;
+    align-content: center;
+}
+
+.fondo h1{
+    color: black;
+}
+
+.pale{
+    background-color: white;
+    opacity: 0.5;
+    width: 100%;
+}
+
+
+
