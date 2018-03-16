@@ -1,0 +1,167 @@
+
+body {
+    background-color: #F0F0F0;
+}
+
+.anton {
+    font-family: 'Anton', sans-serif;
+}
+
+.abel {
+    font-family: 'Abel', sans-serif;
+}
+.bordermio {
+    border-width: 10px;
+    border-color:  #E6E6E6;
+    border-style: solid;
+    border-radius: 10%;
+}
+.circulo {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: white solid 7px;
+    font-weight: bold;
+    text-decoration-style: double;
+}
+.small-circle{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    margin: 0 7px 0 7px;
+    text-align: center;
+    float: left;
+}
+
+.sfera {
+    padding: 10px
+}
+
+div .bordermio{
+    max-width: 80%;
+    margin-left: 10%;
+    padding: 0;
+}
+.bottom-text p {
+    height: 28px;
+    text-align: right
+}
+.red{
+    background: #E6563B;
+}
+
+.orange{
+    background: #EB9D3A;
+}
+.green {
+    background: #7CB06C;
+}
+.turquoise {
+    background: #00ABA9;
+}
+.circulo>p {
+
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    font-family: Abel,sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-decoration-style: double
+}
+.small-circle>p{
+    font-size: .5em;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: black;
+}
+.logo{
+
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    z-index: 3;
+    top: -20px;
+    left: 0;
+    right: 0;
+}
+
+
+.top {
+    height: 60px
+}
+.orb {
+    position: relative;
+    height: 60px;
+}
+.Mainhead{
+
+    padding-top: 30px;
+}
+
+/*!* contenedor circulo sobrepuesto*!*/
+
+.contienecirculo {
+
+    position: relative;
+}
+
+.gap{
+    width: 120px;
+    display: none;
+}
+.gray-box{
+    padding-bottom: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+
+@media screen and (min-device-width: 376px) {
+
+    .volatile {
+        display: none;
+    }
+
+    .menu-r{
+        position: relative;
+        margin: auto;
+    }
+
+    .menu{
+
+        position: absolute;
+        top: -150px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .gap{
+        display: inline-block;
+    }
+
+
+
+
+
+
+
+}
+@media screen and (min-device-width: 768px){
+
+    .hide,.apple{
+        width: 50%;
+        display: inline-block;
+    }
+
+}
+
