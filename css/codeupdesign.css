@@ -125,6 +125,11 @@ div .bordermio{
 .hide{
     display: none;
 }
+.linea{
+
+    color: black;
+    display: inline-block;
+}
 
 
 @media screen and (min-device-width: 376px) {
@@ -162,6 +167,10 @@ div .bordermio{
         width: 50%;
         display: inline-block;
     }
+
+
+
+
 
 }
 

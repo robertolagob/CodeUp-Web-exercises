@@ -1,5 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
 
-
+}
 
 .fondo{
     background-image: url("../Images/pizza.png");
@@ -7,15 +10,51 @@
     align-content: center;
 }
 
-.fondo h1{
-    color: black;
-}
+
 
 .pale{
     background-color: white;
     opacity: 0.5;
     width: 100%;
 }
+
+
+div .btn-default{
+    width: 100px;
+
+    margin-top: 6px;
+    margin-bottom: 6px;
+    float: right;
+    color: white;
+
+}
+
+
+
+div .card-header,
+ul li.list-group-item
+{
+
+    background-color: #DAEDF6;
+}
+
+div {
+    border: solid 1px #DAEDF6;
+}
+
+.icono{
+    background-image: url('/Images/ic_account_circle.png');
+    width: 30px;
+    height: 30px;
+    border: none;
+    text-align: right;
+}
+
+.iconodiv{
+    border: none;
+
+}
+
 
 
 
