@@ -91,9 +91,9 @@ function identity(parametro) {
 
     function rightTriangle(sideA,sideB,sideC) {
 
-        var combination1=(((sideA*sideA)+(sideB*sideB))==(sideC*sideC));
-        var combination2=(((sideB*sideB)+(sideC*sideC))==(sideA*sideA));
-        var combination3=(((sideA*sideA)+(sideC*sideC))==(sideA*sideA));
+        var combination1=((square(sideA)+square(sideB))==square(sideC));
+        var combination2=((square(sideB)+square(sideC))==square(sideA));
+        var combination3=((square(sideA)+square(sideC))==square(sideB));
 
 
         return (combination1||combination2||combination3);
