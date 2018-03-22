@@ -20,6 +20,21 @@
  * Can you refactor your code to use functions?
  */
 
+
+
+//creating a new function to catch the number coming from prompting the users ... need to be applied ...
+
+    function giveMeaNumber(message) {
+
+        var input=prompt(message);
+        var numero=parseInt(input);
+
+        return numero;
+
+
+    }
+
+
     var likes=confirm("would you like to type a number?");
 
 
