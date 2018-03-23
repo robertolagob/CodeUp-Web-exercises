@@ -26,7 +26,7 @@
         }
         }
         else {
-            console.log("your number does not meet the required prameters");
+            console.log("your number does not meet the required conditions");
         }
 
     }
