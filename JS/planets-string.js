@@ -39,18 +39,27 @@
      */
 
 
+// this is almost perfect, bit i got an extra item at the begining and at the end of the list;
 
 
-     planetsArray.push("</li></ul>");
-     planetsArray.unshift("<ul><li>");
-     var temporalarray=planetsArray.join("</li><li>");
+     // var temporalarray=planetsArray.join("</li><li>");
+     //
+     // console.log("we susceed?");
+     // console.log(temporalarray);
 
 
-     console.log("we susceed?");
-     console.log(temporalarray);
+    function addinglabel(item,index,array) {
+
+        console.log("<li>"+item+"</li>")
+
+    }
+
+
+    var nuevoplaneta=planetsArray.forEach(addinglabel);
 
 
 
+    console.log(nuevoplaneta);
 
 
 
