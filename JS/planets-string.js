@@ -50,13 +50,23 @@
 
     function addinglabel(item,index,array) {
 
-        console.log("<li>"+item+"</li>")
+
+        if(index===0){
+            console.log("<ul>"+"<li>"+item+"</li>");
+        }
+        else if (index===array.length-1)
+        {
+            console.log("<li>"+item+"</li>"+"</ul>");
+        }
+        else if ((index!==0)&&(index!==(array.length-1))){
+            console.log("<li>"+item+"</li>");
+        }
 
     }
 
 
-    var nuevoplaneta=planetsArray.forEach(addinglabel);
 
+    var nuevoplaneta=planetsArray.forEach(addinglabel);
 
 
     console.log(nuevoplaneta);
