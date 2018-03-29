@@ -164,11 +164,11 @@
 
 
 
-    books.createBook=function (tittle,authorName) {
+    books.createBook=function (title,authorName) {
 
         var book=new Object();
 
-        book.title=tittle;
+        book.title=title;
         book.author=authorName;
 
 
