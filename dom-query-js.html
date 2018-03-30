@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
+    <style>
+        body {
+            transition: all 1.5s ease;
+        }
+    </style>
 </head>
 <body>
+
+
+<button >Main Header</button>
+<button >Sub Header</button>
+<button >Color List</button>
+<button >First Item</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -25,46 +36,110 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="changeColor">Change color</button>
+
 <script>
-    (function() {
+
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-         var mainHeader = document.getElementById("main-header");
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML="JavaScript is Cool";
 
-        // TODO: Uncomment the next line and get the sub header element by id
-         var subHeader = document.getElementById("sub-header");
+//main header text change
 
-        // TODO: Set the text color of subHeader to blue
+        var header=document.body.getElementsByTagName("button")[0];
 
-        subHeader.style.color="blue";
+        header.addEventListener("click",function () {
 
-        // TODO: Uncomment the next line and get all list items
-         var listItems = document.getElementsByTagName("li");
+            var mainHeader = document.getElementById("main-header");
+            mainHeader.innerHTML="JavaScript is Cool";
 
-        // TODO: Set text color on every other list item to grey
+        })
 
-        for(var i=0;i<=listItems.length-1;i=i+2){
-            listItems[i].style.color="grey";
-        };
+//set the color of sub-header on blue
 
-        // TODO: Set text color of li with dbid = 1 to blue
 
-        for(var i=0;i<=listItems.length-1;i++){
-            if((listItems[i].getAttribute("data-dbid")=="1")){
-                listItems[i].style.color="blue";
+        var sub=document.body.getElementsByTagName("button")[1];
+
+        sub.addEventListener("click",function () {
+
+            var subHeader = document.getElementById("sub-header");
+            subHeader.style.color="blue";
+
+        });
+
+
+
+
+//set the list color on gray every each element
+
+
+
+        var colorlist=document.body.getElementsByTagName("button")[2];
+        colorlist.addEventListener("click",function () {
+
+            var listItems = document.body.getElementsByTagName("li");
+
+            for(var i=0;i<=listItems.length-1;i=i+2){
+                listItems[i].style.color="grey";
             }
-        }
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-         var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        })
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
-        subParagraphs[0].innerText="Mission Accomplished!";
-    })();
+//set first list item on blue color
+
+
+
+    var firstItemb=document.body.getElementsByTagName("button")[3];
+        firstItemb.addEventListener("click",function () {
+
+          var lisItem=document.body.getElementsByTagName("li");
+
+         for(var i=0;i<=4;i++){
+             if(lisItem[i].getAttribute("data-dbid")==="1"){
+                 lisItem[i].style.color="blue";
+             }
+         }
+
+            var subParagraphs = document.getElementsByClassName("sub-paragraph");
+            subParagraphs[0].innerText="Mission Accomplished!";
+
+        })
+
+        firstItemb.addEventListener("onClick",function () {
+            
+        })
+
+
+
+    var botoncolor=document.getElementById("changeColor");
+        botoncolor.addEventListener("click",function () {
+
+                var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
+                    '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
+                    '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A',
+                    '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
+                    '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC',
+                    '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
+                    '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680',
+                    '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
+                    '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3',
+                    '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
+
+
+
+           setInterval(function () {
+
+               var counter=Math.random();
+               counter=Math.round(counter*49);
+               document.body.style.backgroundColor=colorArray[counter];
+
+           },1000)
+        })
+
+        
+
+
+
 </script>
 </body>
 </html>
