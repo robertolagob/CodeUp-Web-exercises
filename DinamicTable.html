@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+
+    //for loop to create a table
+
+
+
+    function createTable(col,row) {
+
+
+        var tablamia=document.createElement("table")
+
+        for(var i=1;i<=row;i++){
+
+            var mirow=document.createElement("tr")
+            for(var j=0;j<col;j++){
+
+               var micell=document.createElement("td");
+               micell.style.border="solid black 1px"
+               var mitexto=document.createTextNode("texto numero"+i.toString());
+               micell.appendChild(mitexto);
+               mirow.appendChild(micell);
+            }
+            tablamia.appendChild(mirow);
+        }
+
+
+        tablamia.style.border=" 1px black solid"
+        tablamia.width="300px";
+        tablamia.height="300px";
+
+        return tablamia;
+
+
+
+    }
+
+
+    document.body.appendChild(createTable(4,4));
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
