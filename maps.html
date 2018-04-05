@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        #map-canvas{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map-canvas"></div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEKoMFeSkslCacRvK5a0siRfS7B4qR9fk"></script>
+
+<script>
+
+
+    var mapOptions={
+
+
+        zoom:19,
+
+        center:{
+
+            lat:29.426791,
+            lng: -98.489602
+        },
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
+
+
+
+   var mapCanvas=document.getElementById("map-canvas");
+   var map=new google.maps.Map(mapCanvas, mapOptions);
+
+
+   //every property has a setter method and can be changed later
+
+
+
+   //geocoder
+
+
+
+    var geocoder= new google.maps.Geocoder();
+
+    var address={
+
+        address:"400 Army Blvd, San Antonio, TX, 78215"
+    };
+
+    function callback(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+
+            // Recenter the map over the address
+            map.setCenter(results[0].geometry.location);
+
+
+            var marker=new google.maps.Marker({
+                position: results[0].geometry.location,
+                map:map
+            });
+
+            var info= new google.maps.InfoWindow({
+                content:'this is the <strong>info</strong><br> window content'
+            });
+
+            info.open(map,marker);
+        }
+
+        else {
+
+            // Show an error message with the status if our request fails
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+
+    }
+
+
+    geocoder.geocode(address, callback);
+
+
+</script>
+
+
+</body>
+</html>
