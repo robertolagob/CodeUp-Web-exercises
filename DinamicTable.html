@@ -6,6 +6,11 @@
 </head>
 <body>
 
+<button id="boton" >Click</button>
+
+
+<textarea id="columna" name="columna"></textarea>
+
 
 <script>
 
@@ -13,6 +18,11 @@
 
     //for loop to create a table
 
+
+    var botonMio=document.getElementById("boton");
+    botonMio.addEventListener("click",function () {
+        document.body.appendChild(createTable(4,4));
+    })
 
 
     function createTable(col,row) {
@@ -35,6 +45,8 @@
         }
 
 
+
+
         tablamia.style.border=" 1px black solid"
         tablamia.width="300px";
         tablamia.height="300px";
@@ -46,7 +58,7 @@
     }
 
 
-    document.body.appendChild(createTable(4,4));
+
 
 
 
