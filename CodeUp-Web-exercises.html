@@ -47,13 +47,7 @@
 <script>
 
     function toggle(){
-        if($("dd").hasClass("invisible"))
-        {
-            $("dd").removeClass("invisible");
-        }
-        else {
-            $("dd").addClass("invisible");
-        }
+        ($("dd").toggleClass("invisible"));
     }
 
 
