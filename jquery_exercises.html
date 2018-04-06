@@ -36,10 +36,35 @@
 <script src="JS/jquery-2.2.4.js"></script>
 <script>
 
-    $("li").css({"font-size: 20px",
-    "background:green"});
 
-    $("p,h1").css("background","green");
+    $("h1").on("click",highlight);
+    $("p").on("dblclick",paragraphSize);
+    $("li").hover(mouseIn,mouseOut);
+
+
+    function highlight(){
+
+        $("h1").css("background-color", "yellow");
+    }
+
+    $("#highlight").on("click",highlight);
+
+
+
+
+    function paragraphSize() {
+        $("p").css("font-size", "20px")
+    }
+
+    function mouseIn() {
+        console.log('mouse entered');
+        $(this).css("background-color", "red");
+    }
+
+    function mouseOut() {
+        console.log('mouse left');
+        $(this).css("background-color","white");
+    }
 
 
 
