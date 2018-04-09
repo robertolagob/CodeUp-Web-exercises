@@ -8,13 +8,39 @@
             display: none;
         }
 
+        .frame1,.frame3,.frame2{
+            width: 250px;
+            height: 200px;
+            background-color: #00ABA9;
+            margin: 10px;
+            float: left;
+        }
+
+
+        .frame1{
+
+        }
+        .frame2
+
+
+
+
     </style>
 </head>
 <body>
+<div>
+    <h1>"Would you like to sign up for our newsletter?"  </h1>
+
+
+        <span class="toHide">X</span>
+
+</div>
 
 
 <h1>Frequently Asked Questions</h1>
 <h2>About the National Park Service</h2>
+
+<p>Click on</p>
 
 <dl>
     <dt>What government agency oversees the National Park Service? </dt>
@@ -40,7 +66,50 @@
 </dl>
 
 
-<p>Click on</p>
+
+<h3>Park1</h3>
+<ul>
+    <li>thing 1</li>
+    <li>thing 2</li>
+    <li>thing 3</li>
+    <li>thing 4</li>
+</ul>
+
+
+<h3>Park2</h3>
+<ul>
+    <li>thing 1</li>
+    <li>thing 2</li>
+    <li>thing 3</li>
+    <li>thing 4</li>
+</ul>
+
+
+<h3>Park3</h3>
+<ul>
+    <li>thing1</li>
+    <li>thing 2</li>
+    <li>thing 3</li>
+    <li>thing 4</li>
+</ul>
+
+
+
+<button id="hitit">Hit it!!</button>
+
+<button id="bold">Bold it</button>
+
+
+<div class="contenedor">
+    <div class="frame1 frames"></div>
+    <div class="frame2 frames"></div>
+    <div class="frame3 frames"></div>
+</div>
+
+
+
+<button id="swap">swap images</button>
+
 
 
 <script src="JS/jquery-2.2.4.js"></script>
@@ -50,8 +119,90 @@
         ($("dd").toggleClass("invisible"));
     }
 
-
     $("p").click(toggle);
+
+    $("#hitit").click(lastChildren);
+    $("#bold").click(bolded);
+
+
+    function lastChildren() {
+        $("ul").children().next().next().next().css("background-color","yellow");
+    }
+
+
+    function bolded() {
+        $("ul").children().css("font-weight","bold");
+    }
+
+    $("li").on("click",function () {
+        $("li:first-child").css("color","blue");
+    })
+
+
+
+//function to set a background image
+
+    var images=[" url(\"Images/apple-ipad.jpg\")"," url(\"Images/macbook.jpg\")"," url(\"Images/mobile-phone.jpg\")"];
+    var divs=[$(".frame1"),$(".frame2"),$(".frame3")];
+
+    function setBackground(division,imagen) {
+        division.css("background-image",imagen)
+    }
+
+
+    function populatingDivs() {
+        for (var i = 0; i < 3; i++) {
+            setBackground(divs[i], images[i]);
+        }
+    }
+
+    $("#swap").click(rotateImag);
+
+
+    function rotateImag(){
+    var temp=images.shift();
+    images.push(temp);
+    populatingDivs();
+
+    }
+
+    $(".toHide").click(function () {
+
+        $(".toHide").parent().hide();
+
+    })
+
+    // $("ul").children().hide();
+
+    //unhide li
+
+
+    $("h3").click(function () {
+
+        $(this).next().children().slideToggle();
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
