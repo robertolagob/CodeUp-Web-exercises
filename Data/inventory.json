@@ -30,5 +30,23 @@
             "tool"
         ],
         "price": 10
+    },
+    {
+        "title": "Drill",
+        "quantity": 12,
+        "categories": [
+            "tool"
+        ],
+        "price": 22
+    },
+    {
+        "title": "Habana Club",
+        "quantity": 500,
+        "categories": [
+            "Alcoholic beverage"
+        ],
+        "price": 51.75
     }
+
+
 ]

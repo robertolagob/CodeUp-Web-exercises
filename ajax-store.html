@@ -19,6 +19,10 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+
+
+<button id="refresh">Update inventory</button>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
@@ -26,6 +30,10 @@
     "use strict";
     // TODO: Create an ajax GET request for /data/inventory.json
 
+    //error function
+    function onError(jqXHR, status, message) {
+        console.log(jqXHR, status, message);
+    }
 
     var request=$.get("Data/inventory.json");
     console.log(request);
@@ -34,11 +42,27 @@
 
 
    request.done(function (response) {
-
        response.forEach(function (value) {
            $("#products").append("<tr><td>"+value.title+"</td><td>"+value.quantity+"</td><td>"+value.price+"</td><td>"+value.categories.toString()+"</td></tr>");
        })
    })
+
+    request.fail(onError());
+
+
+   $("#refresh").click(function () {
+       $("#insertProducts").html(" ");
+       var request=$.get("Data/inventory.json");
+       request.done(function (response) {
+
+           response.forEach(function (value) {
+               $("#products").append("<tr><td>"+value.title+"</td><td>"+value.quantity+"</td><td>"+value.price+"</td><td>"+value.categories.toString()+"</td></tr>");
+           })
+       })
+
+
+   })
+
 
 })();
 </script>
