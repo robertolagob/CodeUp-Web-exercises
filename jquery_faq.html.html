@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .invisible{
+        .invisible, .register{
             display: none;
         }
 
@@ -17,14 +17,6 @@
         }
 
 
-        .frame1{
-
-        }
-        .frame2
-
-
-
-
     </style>
 </head>
 <body>
@@ -32,13 +24,18 @@
     <h1>"Would you like to sign up for our newsletter?"  </h1>
 
 
-        <span class="toHide">X</span>
+        <span class="toHide"><p>X</p></span>
+</div>
+<div class="register">
+    <h2>Please register on our web site?</h2>
 
 </div>
 
 
+
 <h1>Frequently Asked Questions</h1>
 <h2>About the National Park Service</h2>
+
 
 <p>Click on</p>
 
@@ -167,9 +164,7 @@
     }
 
     $(".toHide").click(function () {
-
         $(".toHide").parent().hide();
-
     })
 
     // $("ul").children().hide();
@@ -178,10 +173,12 @@
 
 
     $("h3").click(function () {
-
-        $(this).next().children().slideToggle();
-
+        $(this).next().slideToggle();
     })
+
+   
+
+
 
 
 
