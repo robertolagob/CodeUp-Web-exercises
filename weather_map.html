@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="css/Weather_map.css">
+</head>
+<body>
+
+<div class="container"></div>
+
+<div id="map-canvas"></div>
+
+
+<div class="userInput">
+
+    <p>Enter a city</p>
+    <INPUT type="text" id="Longitude" size="25">
+    <label for="Longitude">Enter a City</label>
+    <button class="setWeather">Check location</button>
+</div>
+
+
+
+
+<script src="JS/jquery-2.2.4.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEKoMFeSkslCacRvK5a0siRfS7B4qR9fk"></script>
+<script>
+
+//object to define the jquery request format
+    var peticion={
+        APPID: "abed5940369d592232ca4f5f817ef94e",
+        lat: "29.423017",
+        lon: "-98.48527",
+        units: "imperial",
+        cnt: 3
+    }
+//jquery object request
+    var $request = $.get("http://api.openweathermap.org/data/2.5/forecast", peticion);
+
+
+//creating and adding content to forecast display divs
+function creatDivs(response) {
+    response.list.forEach(function (value){
+        $(".container").append(createReport(value));
+    })
+}
+
+   $request.done(creatDivs);
+
+
+   //function to create a div html  with a single day report inside
+   function createReport(objetoWeather) {
+       var htmlTime="";
+       htmlTime+="<div class='screen'>";
+       htmlTime+="<h3>"+objetoWeather.main.temp_max+"/"+objetoWeather.main.temp_min+"</h3>"+"\n";
+       htmlTime+="<p>Clouds: "+objetoWeather.weather[0].description+"</p>"+"\n";
+       htmlTime+="<p>Humidity: "+objetoWeather.main.humidity+"</p>"+"\n";
+       htmlTime+="<p>Wind: "+objetoWeather.wind.speed+"</p>"+"\n";
+       htmlTime+="<p>Pressure: "+objetoWeather.main.pressure+"</p>"+"\n";
+       htmlTime+="</div>";
+       return htmlTime
+   }
+
+
+   //creating a map
+
+    var mapOptions = {
+        zoom: 12,
+        center: {
+            lat:  29.426791,
+            lng: -98.489602
+        },
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+    };
+    var mapCanvas = document.getElementById('map-canvas');
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+
+    //for the geocoder is needed an adress and a function
+    var address =" 400 army blvd,San Antonio, TX, 78215";
+
+
+    function callBack(results, status) {
+
+        // Check for a successful result
+        if (status == google.maps.GeocoderStatus.OK) {
+
+            // Recenter the map over the address
+            map.setCenter(results[0].geometry.location);
+            map.setZoom(10);
+        } else {
+
+            // Show an error message with the status if our request fails
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+    }
+
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({ "address": address },callBack );
+
+
+
+    google.maps.event.addListener(map, 'click', function(event) {
+
+        var coordenadas = event.latLng;
+        var lat = coordenadas.lat();
+        var lng = coordenadas.lng();
+        placeMarker(event.latLng);
+        peticion.lat=lat;
+        peticion.lon=lng;
+        var $request = $.get("http://api.openweathermap.org/data/2.5/forecast", peticion);
+        $(".container").html(" ");
+        $request.done(function (response) {
+
+            response.list.forEach(function (value){
+                $(".container").append(createReport(value));
+            })
+        });
+
+
+
+    });
+
+    var marker;
+
+    function placeMarker(location) {
+        if ( marker ) {
+            marker.setPosition(location);
+        } else {
+            marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                draggable:true
+            });
+        }
+    }
+
+
+    $(".setWeather").click(function () {
+
+        var lat = $("#Latitude").val();
+        var lng = $("#Longitude").val();
+        peticion.lat = lat;
+        peticion.lon = lng;
+        var $request = $.get("http://api.openweathermap.org/data/2.5/forecast", peticion);
+        $(".container").html(" ");
+        $request.done(function (response) {
+
+            response.list.forEach(function (value) {
+                $(".container").append(createReport(value));
+            })
+        })
+    })
+
+
+    //a marker.addListener can be added to the drag action on the marker
+
+
+</script>
+
+</body>
+</html>
