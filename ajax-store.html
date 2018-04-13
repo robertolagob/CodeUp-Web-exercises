@@ -32,17 +32,19 @@
 
     //error function
     function onError(jqXHR, status, message) {
-        console.log(jqXHR, status, message);
+        console.log(jqXHR);
+        console.log(message);
     }
 
     var request=$.get("Data/inventory.json");
-    console.log(request);
+
 
     // TODO: Take the data from inventory.json and append it to the products table
 
 
    request.done(function (response) {
        response.forEach(function (value) {
+           //this must be refactored in a fancy way to set html, no in a single line, yo make it more readable
            $("#products").append("<tr><td>"+value.title+"</td><td>"+value.quantity+"</td><td>"+value.price+"</td><td>"+value.categories.toString()+"</td></tr>");
        })
    })
@@ -59,8 +61,6 @@
                $("#products").append("<tr><td>"+value.title+"</td><td>"+value.quantity+"</td><td>"+value.price+"</td><td>"+value.categories.toString()+"</td></tr>");
            })
        })
-
-
    })
 
 

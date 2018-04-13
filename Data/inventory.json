@@ -40,12 +40,12 @@
         "price": 22
     },
     {
-        "title": "Habana Club",
-        "quantity": 500,
+        "title": "Mezcal",
+        "quantity": 300,
         "categories": [
             "Alcoholic beverage"
         ],
-        "price": 51.75
+        "price": 50.75
     }
 
 
