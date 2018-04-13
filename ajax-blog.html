@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- Your custom styles go here -->
+
+    <title>Blog</title>
+</head>
+<body>
+<div id="title">
+
+<h1 >My personal blog</h1>
+</div>
+
+<div id="posts">
+</div>
+
+<button>Style 1</button>
+<button>Style 2</button>
+<button>Style 3</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+
+    //error function
+
+    function onError(jqXHR, status, message) {
+        console.log(jqXHR, status, message);
+    }
+
+
+ var Entrances=$.get("Data/blog.json");
+
+    Entrances.done(function (response) {
+        response.forEach(function (value) {
+            $("#posts").append("<div><h1>"+value.title+"</h1>"+"<h2>"+value.date+"</h2>"+"<p>"+value.content+"</p></div>");
+        })
+    })
+
+
+
+    $("body > button:nth-child(3)").click(function () {
+
+        var estilo=$.get("css/Estilo1.css");
+        estilo.done(function (miestilo) {
+            $("head").append("<style>"+miestilo+"</style>")
+        })
+
+    })
+
+    $("body > button:nth-child(4)").click(function () {
+
+        var estilo=$.get("css/Estilo2.css");
+        estilo.done(function (miestilo) {
+            $("head").append("<style>"+miestilo+"</style>")
+        })
+
+    })
+
+    $("body > button:nth-child(5)").click(function () {
+
+        var estilo=$.get("css/Estilo3.css");
+        estilo.done(function (miestilo) {
+            $("head").append("<style>"+miestilo+"</style>")
+        })
+
+    })
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
