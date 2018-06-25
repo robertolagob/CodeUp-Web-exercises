@@ -34,14 +34,30 @@ const users = [
 ];
 
 
-    let POLIGLOT= users
-    .filter(users=>users.languages.length>2);
-     console.log(POLIGLOT);
 
+
+    let POLIGLOT= users
+    .filter(user=>user.languages.length>2);
+     console.log(POLIGLOT);
 
 
     let EMAILS=users.map(users=>users.email);
      console.log(EMAILS);
+
+
+
+
+     let OBJECTS=users
+         .reduce((accumulator,currentValue) => {
+             accumulator[currentValue.id]=currentValue;
+             return accumulator;
+
+         } , {});
+
+     console.log(OBJECTS);
+
+
+
 
 
 
